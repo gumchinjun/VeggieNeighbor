@@ -28,6 +28,8 @@ class LogInActivity : AppCompatActivity() {
             val email = binding.emailEdit.text.toString()
             val password = binding.passwordEdit.text.toString()
 
+            Log.d("email","$email")
+
             login(email, password)
         }
 
