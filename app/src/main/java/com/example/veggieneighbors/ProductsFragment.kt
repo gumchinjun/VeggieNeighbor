@@ -140,8 +140,6 @@ class ProductsFragment : Fragment(), CategorySelectionListener{
                         document.getString("unit") ?: "",
                         document.getString("img") ?: ""
                     )
-                    Log.d("ITM", "item imported, title:${item.title}, category:${item.category}")
-
                     if (item.category == selectedCategory) {
                         productPostList.add(item)
                         Log.d("ITM", "item added")
