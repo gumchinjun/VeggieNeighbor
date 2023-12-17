@@ -75,6 +75,7 @@ class CreatePost : AppCompatActivity() {
         val productTitle = intent.getStringExtra("productId")
         var productPrice = intent.getStringExtra("productPrice")?.toFloat()
 
+        // haneul4check - userId 받아와서 바꾸기
         val username = "hera"
         val title = binding.editTextTitle.text.toString()
         val participate = binding.editTextNumber.text.toString()
