@@ -41,8 +41,16 @@
             android:exported="false" />
         <activity
             android:name=".NaviActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".LogInActivity"
             android:exported="true">
-            <intent-filter>
+
+
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
