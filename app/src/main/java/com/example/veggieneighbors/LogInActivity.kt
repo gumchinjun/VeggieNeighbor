@@ -80,6 +80,14 @@ class LogInActivity : AppCompatActivity() {
                         val intent = Intent(this@LogInActivity, NaviActivity::class.java)
                         startActivity(intent)
                         Toast.makeText(this, "Welcome back!", Toast.LENGTH_SHORT).show()
+                        if (!binding.checkBox4.isChecked){
+                            Log.d("ITM", "checkbox is not checked")
+                            val editor = sharedPreferences.edit()
+                            editor.putBoolean("isLoggedIn", false)
+                            editor.apply()
+                            val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", true)
+                            Log.d("ITM", "isLoggedIn value: $isLoggedIn")
+                        }
                         finish()
                     }
 
