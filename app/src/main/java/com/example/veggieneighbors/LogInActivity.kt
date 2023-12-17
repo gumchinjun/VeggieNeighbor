@@ -1,6 +1,8 @@
 package com.example.veggieneighbors
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -14,6 +16,7 @@ class LogInActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityLogInBinding
     lateinit var mAuth: FirebaseAuth
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +25,16 @@ class LogInActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         mAuth = Firebase.auth
+
+        sharedPreferences = getSharedPreferences("loginPrefs", Context.MODE_PRIVATE)
+
+        // Check if user is already logged in using SharedPreferences
+        val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false)
+        if (isLoggedIn) {
+            val intent = Intent(this@LogInActivity, NaviActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         binding.loginBtn.setOnClickListener {
 
@@ -48,6 +61,8 @@ class LogInActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
 
+                    saveLoginStatus()
+
                     // 로그인 성공 시 NaviActivity로 이동
                     val intent = Intent(this@LogInActivity, NaviActivity::class.java)
                     startActivity(intent)
@@ -60,6 +75,13 @@ class LogInActivity : AppCompatActivity() {
                     Log.d("login", "에러: ${task.exception}")
                 }
             }
+    }
+
+    private fun saveLoginStatus() {
+        // Save login status in SharedPreferences
+        val editor = sharedPreferences.edit()
+        editor.putBoolean("isLoggedIn", true)
+        editor.apply()
     }
 
 }
