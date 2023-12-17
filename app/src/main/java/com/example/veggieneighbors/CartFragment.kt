@@ -1,10 +1,18 @@
 package com.example.veggieneighbors
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.veggieneighbors.databinding.FragmentHomeBinding
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +29,8 @@ class CartFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    lateinit var binding: FragmentHomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -33,9 +43,22 @@ class CartFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        //showGBPostRecycler()
+        //categoryBtnClickListener()
+
+        //return binding.root
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_cart, container, false)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        //showGBPostRecycler()
+        //categoryBtnClickListener()
+    }
+
 
     companion object {
         /**
@@ -56,4 +79,76 @@ class CartFragment : Fragment() {
                 }
             }
     }
+
+
+
+    fun showGBPostRecycler() {
+        val db = FirebaseFirestore.getInstance()
+        val GBPostList = mutableListOf<GBPostData>()
+        val productPostList = mutableListOf<ProductPostData>()
+        val adapter = GBRecyclerAdapter(GBPostList)
+
+        binding.mainRecyclerView.adapter = adapter
+        binding.mainRecyclerView.layoutManager = LinearLayoutManager(context)
+
+        Log.d("ITM", "Button Clicked.")
+        GlobalScope.launch(Dispatchers.Main) {
+            try {
+                val products = db.collection("Product Posts").get().await()
+                val result = db.collection("GB Posts").get().await()
+
+                GBPostList.clear()
+                for (document in result) {
+                    val item = GBPostData(
+                        document.getString("title") ?: "",
+                        document.getString("username") ?: "",
+                        document.getString("price") ?: "",
+                        document.getString("unit") ?: "",
+                        document.getString("participate") ?: "",
+                        document.getString("region") ?: "",
+                        document.getString("productId") ?: "",
+                        document.getString("img") ?:"",
+                        document.getString("description") ?:""
+                    )
+                    GBPostList.add(item)
+                }
+
+                productPostList.clear()
+                for (document in products) {
+                    val item = ProductPostData(
+                        document.getString("title") ?: "",
+                        document.getString("farm") ?: "",
+                        document.getString("category") ?: "",
+                        document.getString("price") ?: "",
+                        document.getString("unit") ?: "",
+                        document.getString("img") ?: ""
+                    )
+                    productPostList.add(item)
+                }
+
+                adapter.notifyDataSetChanged()
+            } catch (exception: Exception) {
+                Log.d("ITM", "Error getting documents: $exception")
+            }
+        }
+
+    }
+
+
+    fun categoryBtnClickListener() {
+        Log.d("ITM", "buttonClickListner Called!")
+        binding.categoryBtn.setOnClickListener {
+            val productsFragment = ProductsFragment()  // ProductsFragment의 인스턴스 생성
+            val fragmentTransaction = parentFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.fl_container, productsFragment)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+        }
+    }
+
+
+
+
+
+
 }
