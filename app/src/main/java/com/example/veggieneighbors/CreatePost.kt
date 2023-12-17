@@ -1,5 +1,7 @@
 package com.example.veggieneighbors
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,11 +14,15 @@ import com.google.firebase.firestore.FirebaseFirestore
 class CreatePost : AppCompatActivity() {
 
     lateinit var binding: ActivityCreatePostBinding
+    private lateinit var sharedPreferences: SharedPreferences
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityCreatePostBinding.inflate(layoutInflater)
         setContentView(binding.root)
         super.onCreate(savedInstanceState)
+
+        sharedPreferences = getSharedPreferences("loginPrefs", Context.MODE_PRIVATE)
 
         binding.productID.text = intent.getStringExtra("productId")
 
@@ -36,6 +42,7 @@ class CreatePost : AppCompatActivity() {
         }
     }
     fun gatherBtnClickListener(){
+
 
         binding.gatherBtn.setOnClickListener {
             Log.d("ITM","gatherBtn is clicked")
@@ -71,12 +78,14 @@ class CreatePost : AppCompatActivity() {
 
     fun createNewGB():GBPostData{
 
+        val currentUsername = sharedPreferences.getString("currentUsername", "default_value_if_not_found")?:"default"
+        Log.d("ITM", "Create Post - current user : $currentUsername")
+
         var productImg = intent.getStringExtra("productImg")
         val productTitle = intent.getStringExtra("productId")
         var productPrice = intent.getStringExtra("productPrice")?.toFloat()
 
-        // haneul4check - userId 받아와서 바꾸기
-        val username = "hera"
+        val username = currentUsername
         val title = binding.editTextTitle.text.toString()
         val participate = binding.editTextNumber.text.toString()
         val price = binding.editTextPrice.text.toString()

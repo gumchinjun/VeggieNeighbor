@@ -18,6 +18,7 @@ class SignUpActivity : AppCompatActivity() {
     lateinit var mAuth: FirebaseAuth
 
     private lateinit var mDbRef: DatabaseReference
+    private lateinit var userList: MutableList<User>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +52,7 @@ class SignUpActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success
-                    Toast.makeText(this,"회원가입 성공",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"Welcome to Veggie Neighbors",Toast.LENGTH_SHORT).show()
 
                     val intent: Intent = Intent(this@SignUpActivity, LogInActivity::class.java)
                     startActivity(intent)
@@ -61,10 +62,9 @@ class SignUpActivity : AppCompatActivity() {
 
                 } else {
                     // If sign in fails
-                    Toast.makeText(this,"회원가입 실패",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"Failed to register. Try again.",Toast.LENGTH_SHORT).show()
                 }
             }
-
     }
 
     private fun addUserToDatabase(name: String, email: String, uId: String) {
