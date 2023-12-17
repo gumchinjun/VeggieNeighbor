@@ -18,6 +18,8 @@ class CreatePost : AppCompatActivity() {
         setContentView(binding.root)
         super.onCreate(savedInstanceState)
 
+        binding.productID.text = intent.getStringExtra("productId")
+
         calculatePrice()
         gatherBtnClickListener()
         cancelBtnClickListener()
