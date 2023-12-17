@@ -19,9 +19,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VeggieNeighbors"
         tools:targetApi="31">
-        <activity
-            android:name=".ChatActivity"
-            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -41,14 +38,16 @@
             android:exported="false" />
         <activity
             android:name=".NaviActivity"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".SignUpActivity"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".LogInActivity"
             android:exported="true">
-            <intent-filter>
+
+
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -56,9 +55,9 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-        <activity android:name=".CalendarActivity" />
-        <activity android:name=".GPTActivity" />
+            android:exported="false"></activity>
+        <activity android:name=".CalendarActivity"></activity>
+        <activity android:name=".GPTActivity"></activity>
 
         <service
             android:name=".MyFirebaseMessagingService"
