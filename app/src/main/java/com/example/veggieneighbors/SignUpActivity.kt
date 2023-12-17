@@ -43,7 +43,6 @@ class SignUpActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
             }
-
         }
     }
     private fun signUp(name: String, email: String, password: String) {
