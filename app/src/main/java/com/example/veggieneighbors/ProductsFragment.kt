@@ -90,7 +90,7 @@ class ProductsFragment : Fragment(), CategorySelectionListener{
     }
 
     fun showCategoryRecycler(){
-        val categoryList = arrayListOf<String>("Fruits","Vegetables","grains")
+        val categoryList = arrayListOf<String>("Fruits","Vegetables","grains","Herbs","Beans")
 
         val categoryRecyclerAdapter = categoryRecyclerAdapter (categoryList,this)
         binding.categoryRecyclerView.adapter = categoryRecyclerAdapter
