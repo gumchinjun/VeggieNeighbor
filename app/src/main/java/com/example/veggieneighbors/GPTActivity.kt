@@ -58,7 +58,7 @@ class GPTActivity : AppCompatActivity() {
         idTVQuestion.text = question
         etQuestion.setText("")
 
-        val apiKey="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"
+        val apiKey="INSERTAPIKEY"
         val url="https://api.openai.com/v1/engines/text-davinci-003/completions"
 
         val requestBody="""
