@@ -1,27 +1,23 @@
 # ITM_Mobile Programming (코틀린 프로젝트)
-1달동안 코틀린을 언어로 안드로이드 어플리케이션을 개발하는 프로젝트입니다. 
-저희 팀은 식자재를 직구 및 공구할 수 있고 ocr, chatgpt, 
+1달동안 코틀린을 언어로 안드로이드 어플리케이션을 개발하는 프로젝트입니다.<br/>
+저희 팀은 식자재를 직구 및 공구할 수 있고 인벤토리를 관리할 수 있는 어플리케이션을 개발하였습니다.
 
 ## Project-Team7 
 
-## 1. Topic description
-+ The first goal of this project is to recommend ideal locations for air taxi stations upon the introduction of such a service, aiming to identify the most optimal stops.
-
-+ Then, the second goal is to devise an efficient routing plan between these chosen locations, providing paths that minimize travel distance for passengers.     
-
-
-## 2. Problem definition   
-
-+ As urban populations soar and the demand for efficient transportation intensifies, the current infrastructure struggles to keep pace, leading to exacerbated traffic congestion. The challenge is to innovate beyond the saturated capacity of roads and traditional public transit systems. Air taxis emerge as a prospective solution to these problems, offering an alternative mode of transportation that utilizes the underused airspace above cities.
-   
-+ The primary challenge is to identify strategic locations for air taxi stations that harmonize with urban layouts, optimize accessibility, and ensure maximum coverage with minimal disruption to existing city regulations. The second challenge involves developing an effective network to connect these stations, providing passengers with direct and efficient travel routes.
+## 1. 배경 및 주제 선정
++ 비용 상승으로 이어지는 긴 유통과정 때문에 신선도 저하로 이어질 수 있다는 단점이 있습니다.<br/> 
++ 또한, 농장에서 직접 구매하려면 종종 대량으로 구매해야 하므로 개별 가구에 부담이 될 수 있습니다
++ 따라서, 농장의 공동 구매를 용이하게 하는 앱으로, 이웃들이 대량 주문을 공유하고 비용을 절감하며 신선도와 저렴한 가격을 보장하고자 합니다. 
 
 
-## 3. Purpose of the analysis   
+## 2. 주요 기능
 
-### 1) Purpose
-+ __Location Identification__: The first objective is to identify and recommend ideal locations for air taxi stations within urban areas. This involves analyzing and selecting the optimal spots for the air taxi service, taking into account social factors such as population density and the number of businesses. The focus is on ensuring these stations are easily accessible and provide extensive coverage throughout the city.   
-  
+### 1) 로그인
++ 로그인: 설명쓰기
+<img width="138" alt="로그인1" src="https://github.com/gumchinjun/VeggieNeighbor/assets/97167373/5d73974f-6502-4767-aa40-6a332799db84">
+<img width="138" alt="로그인2" src="https://github.com/gumchinjun/VeggieNeighbor/assets/97167373/c8312704-e39f-4899-bbca-158abb5294aa">
+
+
 + __Routing Plan Development__: The second goal is to develop an efficient routing plan between these identified stations. This plan aims to outline the most effective paths that minimize travel distance and time for passengers, enhancing the overall efficiency of the air taxi service.   
 
 ### 2) Expected outcomes
