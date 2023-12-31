@@ -44,10 +44,8 @@ class productRecyclerAdapter(val productPostList: List<ProductPostData>): Recycl
         val storage: FirebaseStorage = FirebaseStorage.getInstance()
         val storageReference = storage.reference
         val pathReference = storageReference.child("Product Posts Res/${productPostList[position].img}")
-        Log.d("ITM", "Image path: $pathReference")
 
         pathReference.downloadUrl.addOnCompleteListener { uri ->
-            Log.d("ITM", "Image URI: $uri")
 
             Glide.with(holder.itemView.context)
                 .load(uri.result)
@@ -58,7 +56,6 @@ class productRecyclerAdapter(val productPostList: List<ProductPostData>): Recycl
         }.addOnFailureListener { exception ->
             Log.d("ITM", "Error getting download URL", exception)
         }
-        Log.d("ITM","title: ${holder.title.text}, context: ${holder.image.context}")
     }
 
     inner class ViewHolder(val binding: ProductPostBinding): RecyclerView.ViewHolder(binding.root) {

@@ -90,7 +90,6 @@ class HomeFragment : Fragment() {
         binding.mainRecyclerView.adapter = adapter
         binding.mainRecyclerView.layoutManager = LinearLayoutManager(context)
 
-        Log.d("ITM", "Button Clicked.")
         GlobalScope.launch(Dispatchers.Main) {
             try {
                 val products = db.collection("Product Posts").get().await()
@@ -134,7 +133,6 @@ class HomeFragment : Fragment() {
     }
 
     fun categoryBtnClickListener() {
-        Log.d("ITM", "buttonClickListner Called!")
         binding.categoryBtn.setOnClickListener {
             val productsFragment = ProductsFragment()  // ProductsFragment의 인스턴스 생성
             val fragmentTransaction = parentFragmentManager.beginTransaction()
