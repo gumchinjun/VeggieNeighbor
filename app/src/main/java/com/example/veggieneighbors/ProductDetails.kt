@@ -38,10 +38,8 @@ class ProductDetails : AppCompatActivity() {
         val storage: FirebaseStorage = FirebaseStorage.getInstance()
         val storageReference = storage.reference
         val pathReference = storageReference.child("Product Posts Res/${img}")
-        Log.d("ITM", "Image path: $pathReference")
 
         pathReference.downloadUrl.addOnCompleteListener { uri ->
-            Log.d("ITM", "Image URI: $uri")
 
             Glide.with(this)
                 .load(uri.result)
