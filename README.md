@@ -18,3 +18,12 @@
 <img width="138" alt="로그인2" src="https://github.com/gumchinjun/VeggieNeighbor/assets/97167373/c8312704-e39f-4899-bbca-158abb5294aa">
 
 
+- DeepLearning
+    - Chatbot service incorporates a Flask server, Langchain and OpenAI technologies. Below are the details of the technologies used:
+    # Flask Server
+    - The Flask server is designed to handle HTTP requests and responses between the client and server through the implementation of REST APIs.
+    - Flask acts as the backend for the chatbot service, receiving questions from users, processing them through appropriate logic, and then returning responses.
+    # Langchain & OpenAI
+    - A toolkit for building NLP pipelines, enabling seamless integration of data loading, processing, search, and generation tasks into a unified process.
+    - Retrieval-Augmented Generation (RAG): Develop search-based methods to find highly relevant information for a given query—specifically targeting facilities for people with disabilities from a CSV dataset, using              ChromaDB for efficient data embedding in vector space.
+    - The answers are generated using OpenAI's gpt-3.5-turbo model, based on the results retrieved.
