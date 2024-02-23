@@ -177,4 +177,4 @@
   </tr>
 </table>
 
-<img width="262" alt="image" src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/a5b2de6b-04af-4d01-9b5e-302c53a5d1de">
+<img width="500" alt="image" src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/a5b2de6b-04af-4d01-9b5e-302c53a5d1de">
