@@ -15,19 +15,6 @@
 ### 1) 로그인 및 회원가입 
 + 로그인: FirebaseAuth와 SharedPreferences를 이용한 onCreate 메소드로 로그인 기능을 구현하고, 이메일과 비밀번호를 파라미터로 받아 Firebase를 통한 인증을 수행합니다.
 
-<table style="width: 100%;">
-  <tr>
-    <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/VeggieNeighbor/assets/97167373/5d73974f-6502-4767-aa40-6a332799db84" alt="Image 1" style="width: 100%;">
-      <p>Login</p>
-    </td>
-    <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/VeggieNeighbor/assets/97167373/c8312704-e39f-4899-bbca-158abb5294aa" alt="Image 2" style="width: 100%;">
-      <p>Login</p>
-    </td>
-  </tr>
-</table>
-
 ### 2) 홈페이지
 + Navi 액티비티는 각 탭에 해당하는 프래그먼트로 구성되며, 바텀 네비게이션에서 아이콘과 텍스트를 정의하는 XML 메뉴 리소스를 생성합니다.
 + 네비게이션 컴포넌트와 통합하여 각 탭에 해당하는 프래그먼트나 목적지로 이동합니다.
@@ -38,15 +25,12 @@
   <tr>
     <td style="text-align: center;">
       <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/96d3d81a-9aac-4956-b034-87a372d16071" alt="Image 3" style="width: 100%;">
-      <p>홈페이지</p>
     </td>
     <td style="text-align: center;">
       <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/6ac9102a-c35b-4e98-903a-bf2ed3fd2888" alt="Image 4" style="width: 100%;">
-      <p>공동구매 상세페이지</p>
     </td>
     <td style="text-align: center;">
       <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/1c258196-8b66-412d-ab54-9c9a79e902f0" alt="Image 5" style="width: 100%;">
-      <p>상품페이지</p>
     </td>
   </tr>
 </table>
@@ -61,16 +45,13 @@
   <tr>
     <td style="text-align: center;">
       <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/1c258196-8b66-412d-ab54-9c9a79e902f0" alt="Image 6" style="width: 100%;">
-      <p>상품페이지(과일)</p>
     </td>
     <td style="text-align: center;">
       <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/973bc1c3-2b95-4d91-aa47-7522ce68e349" alt="Image 7" style="width: 100%;">
-      <p>상품페이지(야채)</p>
     </td>
     <td style="text-align: center;">
       <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/cc993929-1730-4a27-b05c-29420072b56c" alt="Image 8" style="width: 100%;">
-      <p>구글맵</p>
-    </td>
+    </td> 
   </tr>
 </table>
 
@@ -82,16 +63,13 @@
 <table style="width: 100%;">
   <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/e9620f03-0d08-44bd-8220-3ab76ea45d1c" alt="Image 9" style="width: 100%;">
-      <p>상품페이지</p>
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/e9620f03-0d08-44bd-8220-3ab76ea45d1c" alt="Image 9">
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/29aafd42-cdfd-4476-a277-a55ff24780fa" alt="Image 10" style="width: 100%;">
-      <p>현재 가능한 공동구매 목록</p>
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/29aafd42-cdfd-4476-a277-a55ff24780fa" alt="Image 10">
     </td>
         <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/1d37b64d-e8b9-4edc-ab6c-aebdc992ffdc" alt="Image 11" style="width: 100%;">
-      <p>공동구매 폼</p>
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/1d37b64d-e8b9-4edc-ab6c-aebdc992ffdc" alt="Image 11">
     </td>
   </tr>
 </table>
@@ -104,26 +82,21 @@
 <table style="width: 100%;">
   <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/57bd293a-186f-4b6c-bc87-aad4e93c2a56" alt="Image 12" style="width: 100%;">
-      <p>My Fridge 기본화면</p>
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/57bd293a-186f-4b6c-bc87-aad4e93c2a56" alt="Image 12">
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/aa01b1e6-e29e-466b-8463-b65ba7198b4d" alt="Image 13" style="width: 100%;">
-      <p>OCR을 위한 업로드</p>
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/aa01b1e6-e29e-466b-8463-b65ba7198b4d" alt="Image 13">
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/7fd5d7d5-8696-432b-b17b-c909462f91e9" alt="Image 14" style="width: 100%;">
-      <p>사진 업로드</p>
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/7fd5d7d5-8696-432b-b17b-c909462f91e9" alt="Image 14">
     </td>
   </tr>
   <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/c4b09d1a-47a9-4df3-828e-fa7fded52a8b" alt="Image 15" style="width: 100%;">
-      <p>OCR 인식 결과</p>
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/c4b09d1a-47a9-4df3-828e-fa7fded52a8b" alt="Image 15">
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/3edaa379-7c88-44c5-9b7d-5d56d2bd7f03" alt="Image 16" style="width: 100%;">
-      <p>새로운 상품이 추가된 화면</p>
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/3edaa379-7c88-44c5-9b7d-5d56d2bd7f03" alt="Image 16">
     </td>
   </tr>
 </table>
@@ -136,12 +109,10 @@
 <table style="width: 100%;">
   <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/0292a095-216e-493d-b6ab-2b21c9aaf6c2" alt="Image 17" style="width: 100%;">
-      <p> 챗봇 </p>
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/0292a095-216e-493d-b6ab-2b21c9aaf6c2" alt="Image 17">
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/0b80c8aa-e84c-4ce0-8b00-1c2b66d0117f" alt="Image 18" style="width: 100%;">
-      <p> 챗봇 </p>
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/0b80c8aa-e84c-4ce0-8b00-1c2b66d0117f" alt="Image 18">
     </td>
   </tr>
 </table>
@@ -167,16 +138,13 @@
 <table style="width: 100%;">
   <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/c81ac6ae-eb98-47c4-93f4-e0348543b351" alt="Image 19" style="width: 100%;">
-      <p>캘린더</p>
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/c81ac6ae-eb98-47c4-93f4-e0348543b351" alt="Image 19">
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/a6e2ca2b-3c43-4638-83d1-28a3decab6fa" alt="Image 20" style="width: 100%;">
-      <p>헤드업 메세지</p>
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/a6e2ca2b-3c43-4638-83d1-28a3decab6fa" alt="Image 20">
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/fb97fe78-253b-4017-83e4-6a5168c5c1f6" alt="Image 21" style="width: 100%;">
-      <p>메세지</p>
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/fb97fe78-253b-4017-83e4-6a5168c5c1f6" alt="Image 21">
     </td>
   </tr>
 </table>
