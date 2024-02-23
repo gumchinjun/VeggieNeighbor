@@ -91,3 +91,90 @@
     </td>
   </tr>
 </table>
+
+### 5) 냉장고(장바구니)
++ 영수증 OCR을 통해 '내 냉장고에 추가' 항목을 구현하고, Google의 MLKIT 텍스트 인식을 사용합니다.
++ OCR은 이미지에서 텍스트를 인식하여 "제품", "가격", "날짜"와 같은 패턴을 사용하여 필요한 정보를 추출합니다.
++ 사용자가 '내 냉장고에 추가'를 클릭하면 인식된 데이터를 파싱하여 Firestore에 냉장고 항목 데이터로 추가하고 유통 기한을 계산한 후 '내 냉장고'로 전환합니다.
+
+<table style="width: 100%;">
+  <tr>
+    <td style="text-align: center;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/57bd293a-186f-4b6c-bc87-aad4e93c2a56" alt="Image 11" style="width: 100%;">
+      <p>My Fridge 기본화면</p>
+    </td>
+    <td style="text-align: center;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/aa01b1e6-e29e-466b-8463-b65ba7198b4d" alt="Image 12" style="width: 100%;">
+      <p>OCR을 위한 업로드</p>
+    </td>
+    <td style="text-align: center;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/7fd5d7d5-8696-432b-b17b-c909462f91e9" alt="Image 13" style="width: 100%;">
+      <p>사진 업로드</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/c4b09d1a-47a9-4df3-828e-fa7fded52a8b" alt="Image 14" style="width: 100%;">
+      <p>OCR 인식 결과</p>
+    </td>
+    <td style="text-align: center;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/3edaa379-7c88-44c5-9b7d-5d56d2bd7f03" alt="Image 15" style="width: 100%;">
+      <p>새로운 상품이 추가된 화면</p>
+    </td>
+  </tr>
+</table>
+
+### 6) 챗봇서비스(OpenAI)
++ 사용자가 아이템 선택에 도움을 요청할 때 도움을 주는 AI 기반 챗봇 서비스입니다.
++ `GPTActivity` 화면에서 사용자가 질문을 입력하고 'Send' 버튼을 누릅니다.
++ 질문은 GPT API로 전송되어 적절한 답변을 생성합니다.
++ 
+<table style="width: 100%;">
+  <tr>
+    <td style="text-align: center;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/0292a095-216e-493d-b6ab-2b21c9aaf6c2" alt="Image 16" style="width: 100%;">
+      <p> 챗봇 </p>
+    </td>
+    <td style="text-align: center;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/0b80c8aa-e84c-4ce0-8b00-1c2b66d0117f" alt="Image 17" style="width: 100%;">
+      <p> 챗봇 </p>
+    </td>
+  </tr>
+</table>
+
+### 7) Firebase Cloud Messaging (알림 기능)
+**캘린더 기능**
++ 사용자는 안드로이드 '캘린더 액티비티' 화면에서 날짜를 선택하고 일정을 저장합니다.
++ '저장' 버튼을 클릭하면 선택한 날짜에 일정이 저장되고 Firestore에 타임스탬프와 함께 업로드됩니다.
++ 저장된 일정은 수정하거나 삭제할 수 있으며, 앱의 이전 화면으로 돌아가는 '뒤로' 버튼이 제공됩니다.
+
+**FCM**
++ 서버에서 클라이언트로 알림 메시지를 보내는 메시지 전송 서비스입니다. 앱 사용자의 배송 날짜에 관련 메세지를 전송할 수 있습니다.
+
+- Node.js (서버 사이드)
+1. Firebase Admin SDK 초기화 및 인증: 서버가 Firebase 서비스(Firestore, FCM)에 안전하게 접근할 수 있도록 합니다.
+2. Firestore 데이터 처리: 필요한 데이터를 Firestore 데이터베이스에서 조회합니다.
+3. FCM 푸시 알림 생성 및 전송: 필요한 정보를 바탕으로 FCM 푸시 알림을 설정하고 FCM을 통해 디바이스로 전송합니다.
+
+- Kotlin (안드로이드 클라이언트 사이드)
+1. FCM 메시지 수신: FCM으로부터 알림이 도착하면, 서비스가 알림의 내용을 파싱하여 필요한 경우 사용자에게 보여줄 데이터로 변환합니다.
+2. UI에서 알림 표시: 받은 알림 데이터를 바탕으로 사용자에게 시각적으로 헤드업 알림을 표시합니다.
+
+<table style="width: 100%;">
+  <tr>
+    <td style="text-align: center;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/c81ac6ae-eb98-47c4-93f4-e0348543b351" alt="Image 18" style="width: 100%;">
+      <p>캘린더</p>
+    </td>
+    <td style="text-align: center;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/a6e2ca2b-3c43-4638-83d1-28a3decab6fa" alt="Image 19" style="width: 100%;">
+      <p>헤드업 메세지</p>
+    </td>
+    <td style="text-align: center;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/fb97fe78-253b-4017-83e4-6a5168c5c1f6" alt="Image 20" style="width: 100%;">
+      <p>메세지</p>
+    </td>
+  </tr>
+</table>
+
+<img width="262" alt="image" src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/a5b2de6b-04af-4d01-9b5e-302c53a5d1de">
