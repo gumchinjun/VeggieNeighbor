@@ -117,7 +117,7 @@
   </tr>
 </table>
 
-### 7) Firebase Cloud Messaging (알림 기능)
+### 7) Firebase Cloud Messaging (알림 기능)
 **캘린더 기능**
 + 사용자는 안드로이드 '캘린더 액티비티' 화면에서 날짜를 선택하고 일정을 저장합니다.
 + '저장' 버튼을 클릭하면 선택한 날짜에 일정이 저장되고 Firestore에 타임스탬프와 함께 업로드됩니다.
