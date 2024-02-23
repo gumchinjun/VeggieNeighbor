@@ -56,7 +56,7 @@
 + Firebase Firestore에서 상품 정보를 읽어와 리사이클러 뷰에 표시합니다.
 + 상품의 이미지는 Firebase Storage를 통해 관리되며, Glide 라이브러리로 불러와집니다.
 + 카테고리 선택 시 해당 상품만 필터링하여 보여주고, 상품 클릭 시 상세 페이지로 넘어갑니다.
-  
++ 구글 맵 API를 통해, 해당 지역의 상품들을 확인할 수 있다.
 <table style="width: 100%;">
   <tr>
     <td style="text-align: center;">
@@ -66,6 +66,10 @@
     <td style="text-align: center;">
       <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/973bc1c3-2b95-4d91-aa47-7522ce68e349" alt="Image 7" style="width: 100%;">
       <p>상품페이지(야채)</p>
+    </td>
+    <td style="text-align: center;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/cc993929-1730-4a27-b05c-29420072b56c" alt="Image 8" style="width: 100%;">
+      <p>구글맵</p>
     </td>
   </tr>
 </table>
@@ -78,15 +82,15 @@
 <table style="width: 100%;">
   <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/e9620f03-0d08-44bd-8220-3ab76ea45d1c" alt="Image 8" style="width: 100%;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/e9620f03-0d08-44bd-8220-3ab76ea45d1c" alt="Image 9" style="width: 100%;">
       <p>상품페이지</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/29aafd42-cdfd-4476-a277-a55ff24780fa" alt="Image 9" style="width: 100%;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/29aafd42-cdfd-4476-a277-a55ff24780fa" alt="Image 10" style="width: 100%;">
       <p>현재 가능한 공동구매 목록</p>
     </td>
         <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/1d37b64d-e8b9-4edc-ab6c-aebdc992ffdc" alt="Image 10" style="width: 100%;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/1d37b64d-e8b9-4edc-ab6c-aebdc992ffdc" alt="Image 11" style="width: 100%;">
       <p>공동구매 폼</p>
     </td>
   </tr>
@@ -100,25 +104,25 @@
 <table style="width: 100%;">
   <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/57bd293a-186f-4b6c-bc87-aad4e93c2a56" alt="Image 11" style="width: 100%;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/57bd293a-186f-4b6c-bc87-aad4e93c2a56" alt="Image 12" style="width: 100%;">
       <p>My Fridge 기본화면</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/aa01b1e6-e29e-466b-8463-b65ba7198b4d" alt="Image 12" style="width: 100%;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/aa01b1e6-e29e-466b-8463-b65ba7198b4d" alt="Image 13" style="width: 100%;">
       <p>OCR을 위한 업로드</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/7fd5d7d5-8696-432b-b17b-c909462f91e9" alt="Image 13" style="width: 100%;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/7fd5d7d5-8696-432b-b17b-c909462f91e9" alt="Image 14" style="width: 100%;">
       <p>사진 업로드</p>
     </td>
   </tr>
   <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/c4b09d1a-47a9-4df3-828e-fa7fded52a8b" alt="Image 14" style="width: 100%;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/c4b09d1a-47a9-4df3-828e-fa7fded52a8b" alt="Image 15" style="width: 100%;">
       <p>OCR 인식 결과</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/3edaa379-7c88-44c5-9b7d-5d56d2bd7f03" alt="Image 15" style="width: 100%;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/3edaa379-7c88-44c5-9b7d-5d56d2bd7f03" alt="Image 16" style="width: 100%;">
       <p>새로운 상품이 추가된 화면</p>
     </td>
   </tr>
@@ -132,11 +136,11 @@
 <table style="width: 100%;">
   <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/0292a095-216e-493d-b6ab-2b21c9aaf6c2" alt="Image 16" style="width: 100%;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/0292a095-216e-493d-b6ab-2b21c9aaf6c2" alt="Image 17" style="width: 100%;">
       <p> 챗봇 </p>
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/0b80c8aa-e84c-4ce0-8b00-1c2b66d0117f" alt="Image 17" style="width: 100%;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/0b80c8aa-e84c-4ce0-8b00-1c2b66d0117f" alt="Image 18" style="width: 100%;">
       <p> 챗봇 </p>
     </td>
   </tr>
@@ -163,18 +167,19 @@
 <table style="width: 100%;">
   <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/c81ac6ae-eb98-47c4-93f4-e0348543b351" alt="Image 18" style="width: 100%;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/c81ac6ae-eb98-47c4-93f4-e0348543b351" alt="Image 19" style="width: 100%;">
       <p>캘린더</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/a6e2ca2b-3c43-4638-83d1-28a3decab6fa" alt="Image 19" style="width: 100%;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/a6e2ca2b-3c43-4638-83d1-28a3decab6fa" alt="Image 20" style="width: 100%;">
       <p>헤드업 메세지</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/fb97fe78-253b-4017-83e4-6a5168c5c1f6" alt="Image 20" style="width: 100%;">
+      <img src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/fb97fe78-253b-4017-83e4-6a5168c5c1f6" alt="Image 21" style="width: 100%;">
       <p>메세지</p>
     </td>
   </tr>
 </table>
 
+- FCM 아키텍쳐
 <img width="500" alt="image" src="https://github.com/gumchinjun/gumchinjun.github.io/assets/97167373/a5b2de6b-04af-4d01-9b5e-302c53a5d1de">
